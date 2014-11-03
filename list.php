@@ -1,3 +1,4 @@
+<!-- Mengecek Koneksi -->
 <?php
 include('connection.php');
 ?>
@@ -37,6 +38,7 @@ header('Location: index.php');
   <br>
   <a href="logout.php"><button type="button" class="btn btn-default">Logout</button></a><br>
   
+  <!-- Menampilkan List Semua Buku -->
   <center><h2>Daftar Semua Buku</h2>
   <br>
   <table class="table table-striped" border="1">
@@ -71,8 +73,9 @@ header('Location: index.php');
     }
     ?>
     </tbody>
-</table></center>
+  </table></center>
 
+  <!-- Footer -->
   <br><br><br>
   <div class="panel panel-default">
   <div class="panel-footer"><center><span class="glyphicon glyphicon-copyright-mark"></span> <?php echo date("Y"); ?> by <b>Kelompok 35 Praktikum Basis Data</b>

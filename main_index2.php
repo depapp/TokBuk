@@ -32,6 +32,8 @@ header('Location: index.php');
   <h3>Selamat Datang, <b><? echo $_SESSION['username']; ?></b></h3>
   <br>
   <a href="logout.php"><button type="button" class="btn btn-default">Logout</button></a>
+
+  <!-- Menampilkan Form Pencarian Buku -->
   <center><h2>Pencarian Buku</h2><br>
   <form name="search" action="cari_proses.php" method="post">
     Cari : &nbsp;<input type="text" name="find" /> &nbsp;berdasarkan&nbsp;
@@ -45,6 +47,7 @@ header('Location: index.php');
   </form>
   </center>
 
+  <!-- Footer -->
   <br><br><br>
   <div class="panel panel-default">
   <div class="panel-footer"><center><span class="glyphicon glyphicon-copyright-mark"></span> <?php echo date("Y"); ?> by <b>Kelompok 35 Praktikum Basis Data</b>

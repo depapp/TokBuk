@@ -4,10 +4,12 @@ if (!isset($_SESSION['username'])) {
 header('Location: index.php');
 }?>
 
+<!-- Mengecek Koneksi Ke Database -->
 <?php
 include('connection.php');
 ?>
 
+<!-- Mendapatkan ID Data Buku -->
 <?php
 $id = $_GET['id'];
 $query = mysql_query("select * from daftarbuku where id='$id'") or die(mysql_error());
@@ -42,6 +44,8 @@ $data = mysql_fetch_array($query);
   <br>
   <a href="logout.php"><button type="button" class="btn btn-default">Logout</button></a><br>
   <br>
+
+  <!-- Menampilkan Form Update Data -->
   <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
       <tr>
         <form name="update_data" method="post" action="update.php">
@@ -92,6 +96,7 @@ $data = mysql_fetch_array($query);
       </tr>
   </table>
 
+  <!-- Footer -->
   <br><br><br>
   <div class="panel panel-default">
   <div class="panel-footer"><center><span class="glyphicon glyphicon-copyright-mark"></span> <?php echo date("Y"); ?> by <b>Kelompok 35 Praktikum Basis Data</b>

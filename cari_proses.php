@@ -32,16 +32,16 @@ header('Location: index.php');
   <h3>Selamat Datang, <b><? echo $_SESSION['username']; ?></b></h3>
   <br>
   <a href="logout.php"><button type="button" class="btn btn-default">Logout</button></a>
-  <center>
-  <!-- Proses Menampilkan Data -->
-  <?php
   
+  <!-- Proses Menampilkan Data -->
+  <center>
+  <?php  
   $con = mysql_connect("localhost","root","");
   // cek koneksi
   if (!$con) {
     echo "Gagal konek ke database: " . mysqli_connect_error();
-  } else {
-    mysql_select_db("tokbuk", $con);
+      } else {
+        mysql_select_db("tokbuk", $con);
   }
     
   $field = $_POST['field'];
@@ -85,13 +85,13 @@ header('Location: index.php');
     echo "<br>Tidak ada data yang cocok<br><br>";
   }
   
-  //menampilkan kata pencarian
-  //echo "<b>Kata pencarian :</b> " .$find;
   mysql_close($con);
-?>
+  ?>
 
+  <!-- Menampilkan Pilihan Cari Lagi -->
   <br><br><a href="main_index2.php"><button type="button" class="btn btn-default">Cari Lagi</button></a>
 
+  <!-- Footer -->
   <br><br><br>
   <div class="panel panel-default">
   <div class="panel-footer"><center><span class="glyphicon glyphicon-copyright-mark"></span> <?php echo date("Y"); ?> by <b>Kelompok 35 Praktikum Basis Data</b>

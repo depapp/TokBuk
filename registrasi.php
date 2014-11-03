@@ -2,7 +2,7 @@
 include("connection.php");
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-	// username and password sent from Form
+	// username & password Dikirim Dari Form Input
 	$username=mysql_real_escape_string($_POST['username']); 
 	$password=mysql_real_escape_string($_POST['password']); 
 	
@@ -72,6 +72,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			</tr>
 	</table>
 
+  <!-- Footer -->
   <br><br><br><br><br><br><br>
   <div class="panel panel-default">
   <div class="panel-footer"><center><span class="glyphicon glyphicon-copyright-mark"></span> <?php echo date("Y"); ?> by <b>Kelompok 35 Praktikum Basis Data</b>
